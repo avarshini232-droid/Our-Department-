@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Department of Artificial Intelligence</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #f7f9fc;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: linear-gradient(135deg,#243b80,#5b6ee1);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-text h2 {
+            font-size: 17px;
+            color: #243b80;
+        }
+
+        .logo-text p {
+            font-size: 10px;
+            color: #777;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4d63d2;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 75px;
+
+            background:
+                linear-gradient(
+                    rgba(17,34,75,0.85),
+                    rgba(31,51,110,0.85)
+                ),
+                url("college.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .hero-content span {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d9e0ff;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            margin: 15px 0;
+            line-height: 1.15;
+        }
+
+        .hero-content h1 span {
+            color: #8fa2ff;
+            font-size: inherit;
+            letter-spacing: 0;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            color: #e7e9f5;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #ffffff;
+            color: #243b80;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .outline-btn {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .outline-btn:hover {
+            background: white;
+            color: #243b80;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #536bd5;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #202b49;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: #777;
+            max-width: 650px;
+            margin: 10px auto;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .about-content h3 {
+            font-size: 28px;
+            color: #243b80;
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin-bottom: 12px;
+            color: #444;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #536bd5;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* ================= COLLEGE ================= */
+
+        .college {
+            background: #f1f4ff;
+        }
+
+        .college-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .college-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .college-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .college-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .college-card h3 {
+            color: #243b80;
+            margin-bottom: 10px;
+        }
+
+        .college-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ================= VIDEO ================= */
+
+        .video-section {
+            background: white;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: auto;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+            background: #111;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        .video-text {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+        }
+
+        /* ================= FACULTY ================= */
+
+        .faculty {
+            background: #f7f9fc;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .faculty-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .faculty-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .faculty-info {
+            padding: 20px;
+        }
+
+        .faculty-info h3 {
+            color: #243b80;
+            margin-bottom: 5px;
+        }
+
+        .faculty-info .designation {
+            color: #536bd5;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .faculty-info p {
+            font-size: 13px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* ================= PROGRAMS ================= */
+
+        .programs {
+            background: white;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .program-card {
+            border: 1px solid #e4e7ef;
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            border-color: #536bd5;
+            box-shadow: 0 10px 30px rgba(60,80,160,0.1);
+        }
+
+        .program-card h3 {
+            color: #243b80;
+            margin-bottom: 10px;
+        }
+
+        .program-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ================= FACILITIES ================= */
+
+        .facilities {
+            background: #f1f4ff;
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .facility {
+            background: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .facility-icon {
+            font-size: 35px;
+        }
+
+        .facility h3 {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #243b80;
+        }
+
+        /* ================= ACHIEVEMENTS ================= */
+
+        .achievements {
+            background: #243b80;
+            color: white;
+        }
+
+        .achievements .section-title h2,
+        .achievements .section-title p {
+            color: white;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .achievement h2 {
+            font-size: 38px;
+            color: #9eafff;
+        }
+
+        .achievement p {
+            font-size: 13px;
+            color: #e0e4f5;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            color: #243b80;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .contact-box {
+            background: #f1f4ff;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            border: none;
+            background: white;
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .contact-box textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-btn {
+            border: none;
+            cursor: pointer;
+            background: #243b80;
+            color: white;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #151d35;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #adb5cc;
+            font-size: 13px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .college-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .facility-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .achievement-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 550px) {
+
+            section {
+                padding: 65px 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facility-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                AI
+            </div>
+
+            <div class="logo-text">
+
+                <h2>AI Department</h2>
+
+                <p>College of Computing</p>
+
+            </div>
+
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#college">College</a></li>
+
+            <li><a href="#faculty">Faculty</a></li>
+
+            <li><a href="#programs">Programs</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span>Welcome to our department</span>
+
+        <h1>
+            Department of
+            <span>Artificial Intelligence</span>
+        </h1>
+
+        <p>
+            Empowering students with knowledge, creativity
+            and technology to build the intelligent solutions
+            of tomorrow.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="btn primary-btn">
+                Explore Department
+            </a>
+
+            <a href="#video" class="btn outline-btn">
+                Watch College Video
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT DEPARTMENT ================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>About Us</span>
+
+            <h2>About Our Department</h2>
+
+            <p>
+                Discover our department, academic environment
+                and opportunities for students.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img src="department.jpg"
+                     alt="Department">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h3>
+                    Building the Future with AI
+                </h3>
+
+                <p>
+                    Our department focuses on providing students
+                    with strong technical knowledge and practical
+                    experience in Artificial Intelligence,
+                    programming and emerging technologies.
+                </p>
+
+                <p>
+                    We encourage innovation, research,
+                    collaboration and continuous learning.
+                </p>
+
+
+                <ul class="about-list">
+
+                    <li>
+                        Industry-oriented education
+                    </li>
+
+                    <li>
+                        Experienced faculty members
+                    </li>
+
+                    <li>
+                        Modern laboratories
+                    </li>
+
+                    <li>
+                        Practical learning opportunities
+                    </li>
+
+                    <li>
+                        Student projects and activities
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLEGE ================= -->
+
+<section class="college" id="college">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Institution</span>
+
+            <h2>About the College</h2>
+
+            <p>
+                Learn more about our college and its
+                academic environment.
+            </p>
+
+        </div>
+
+
+        <div class="college-grid">
+
+            <div class="college-card">
+
+                <div class="icon">🎓</div>
+
+                <h3>Quality Education</h3>
+
+                <p>
+                    Providing students with quality education
+                    and opportunities for academic growth.
+                </p>
+
+            </div>
+
+
+            <div class="college-card">
+
+                <div class="icon">🔬</div>
+
+                <h3>Innovation</h3>
+
+                <p>
+                    Encouraging students to explore new ideas,
+                    research and emerging technologies.
+                </p>
+
+            </div>
+
+
+            <div class="college-card">
+
+                <div class="icon">🌎</div>
+
+                <h3>Global Exposure</h3>
+
+                <p>
+                    Preparing students with skills and
+                    experiences for a global career.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLEGE VIDEO ================= -->
+
+<section class="video-section" id="video">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Discover Our Campus</span>
+
+            <h2>College Video</h2>
+
+            <p>
+                Take a virtual look at our college,
+                campus and academic environment.
+            </p>
+
+        </div>
+
+
+        <div class="video-container">
+
+            <!-- Replace college-video.mp4 with your video -->
+
+            <video controls poster="college-video-poster.jpg">
+
+                <source
+                    src="college-video.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video playback.
+
+            </video>
+
+        </div>
+
+
+        <p class="video-text">
+            Watch the video to explore our college campus
+            and learning environment.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FACULTY ================= -->
+
+<section class="faculty" id="faculty">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Team</span>
+
+            <h2>Meet Our Faculty</h2>
+
+            <p>
+                Meet the faculty members who guide and
+                inspire our students.
+            </p>
+
+        </div>
+
+
+        <div class="faculty-grid">
+
+
+            <!-- FACULTY 1 -->
+
+            <div class="faculty-card">
+
+                <img src="faculty1.jpg"
+                     alt="Faculty Member">
+
+                <div class="faculty-info">
+
+                    <h3>
+                        nissi teppali
+                    </h3>
+
+                    <p>
+                        Artificial Intelligence &
+                        Machine Learning
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faculty-card">
+
+                <img src="faculty2.jpg"
+                     alt="Faculty Member">
+
+                <div class="faculty-info">
+
+                    <h3>
+                        Sathana
+                    </h3>
+
+                
+
+                    <p>
+                        Computer Science &
+                        Programming
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section class="programs" id="programs">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Academics</span>
+
+            <h2>Programs Offered</h2>
+
+            <p>
+                Explore the academic programs offered
+                by our department.
+            </p>
+
+        </div>
+
+
+        <div class="program-grid">
+
+
+            <div class="program-card">
+
+                <h3>
+                    BCA – Artificial Intelligence
+                </h3>
+
+                <p>
+                    A comprehensive undergraduate program
+                    covering programming, artificial intelligence,
+                    data science and modern computing technologies.
+                </p>
+
+            </div>
+
+
+            <div class="program-card">
+
+                <h3>
+                    Artificial Intelligence & Machine Learning
+                </h3>
+
+                <p>
+                    Students learn machine learning,
+                    deep learning, data analytics and
+                    intelligent systems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FACILITIES ================= -->
+
+<section class="facilities">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Infrastructure</span>
+
+            <h2>Our Facilities</h2>
+
+        </div>
+
+
+        <div class="facility-grid">
+
+            <div class="facility">
+
+                <div class="facility-icon">💻</div>
+
+                <h3>Computer Labs</h3>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">🤖</div>
+
+                <h3>AI Lab</h3>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">📚</div>
+
+                <h3>Library</h3>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">🌐</div>
+
+                <h3>Smart Classrooms</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="achievements">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Growth</span>
+
+            <h2>Department at a Glance</h2>
+
+            <p>
+                Some highlights of our department.
+            </p>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+            <div class="achievement">
+
+                <h2>10+</h2>
+
+                <p>Faculty Members</p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h2>500+</h2>
+
+                <p>Students</p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h2>20+</h2>
+
+                <p>Projects</p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h2>10+</h2>
+
+                <p>Labs & Facilities</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Get in Touch</span>
+
+            <h2>Contact Our Department</h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Department of BCA(Artificial Intelligence)
+                </h3>
+
+                <p>
+                    📍Joy University,
+                      Tirunelveli, Tamil Nadu
+                </p>
+
+                <p>
+                    📧 ai.department@college.edu
+                </p>
+
+                <p>
+                    ☎ +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    🕘 Monday – Friday | 9:00 AM – 4:30 PM
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <input
+                    type="text"
+                    placeholder="Your Name">
+
+                <input
+                    type="email"
+                    placeholder="Your Email">
+
+                <textarea
+                    placeholder="Your Message"></textarea>
+
+                <button class="btn submit-btn">
+                    Send Message
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        Department of  BCA(Artificial Intelligence)
+    </h3>
+
+    <p>
+        Empowering Students • Inspiring Innovation •
+        Building the Future
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 All Rights Reserved
+    </p>
+
+</footer>
+
+
+</body>
+</html>
